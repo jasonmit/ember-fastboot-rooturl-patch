@@ -1,6 +1,8 @@
 # Ember-fastboot-rooturl-patch
 
-This README outlines the details of collaborating on this Ember addon.
+Temporary patch to work around rootURL being broken in FastBoot.
+
+Track the patch, https://github.com/emberjs/ember.js/issues/13464 for when to remove from your project.
 
 ## Installation
 

@@ -1,7 +1,7 @@
 {
   "name": "ember-fastboot-rooturl-patch",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "A patch for supporting rootURL in fastboot",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,8 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/jasonmit/ember-fastboot-rooturl-patch.git",
+  "homepage": "https://github.com/jasonmit/ember-fastboot-rooturl-patch",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -31,7 +32,6 @@
     "ember-cli-release": "0.2.8",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.5.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
@@ -40,7 +40,9 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "fastboot",
+    "ember-fastboot"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6"
