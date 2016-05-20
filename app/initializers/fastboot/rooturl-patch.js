@@ -11,7 +11,7 @@ export default {
 
     Ember.NoneLocation.reopen({
       detect() {
-        var rootURL = this.rootURL;
+        let rootURL = this.rootURL;
 
         assert('rootURL must end with a trailing forward slash e.g. "/app/"',
                  rootURL.charAt(rootURL.length - 1) === '/');
