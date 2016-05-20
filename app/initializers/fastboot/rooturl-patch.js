@@ -10,6 +10,13 @@ export default {
     assert('ember-fastboot-rooturl-patch is no longer needed, remove from package.json', !proto.hasOwnProperty('rootURL'));
 
     Ember.NoneLocation.reopen({
+      detect() {
+        var rootURL = this.rootURL;
+
+        assert('rootURL must end with a trailing forward slash e.g. "/app/"',
+                 rootURL.charAt(rootURL.length - 1) === '/');
+      },
+
       rootURL: '/',
 
       /**
@@ -21,12 +28,12 @@ export default {
       getURL() {
         let path = get(this, 'path');
         let rootURL = get(this, 'rootURL');
-
+    
         // remove trailing slashes if they exists
         rootURL = rootURL.replace(/\/$/, '');
-
+    
         // remove rootURL from url
-        return path.replace(rootURL, '');
+        return path.replace(new RegExp('^' + rootURL), '');
       },
 
       /**
