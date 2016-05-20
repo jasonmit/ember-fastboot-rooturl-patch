@@ -29,9 +29,10 @@ export default {
           }
         };
 
-        get(router, 'location').setURL(url);
+        let location = get(router, 'location');
+        location.setURL(url);
 
-        return router.handleURL(this.getURL()).then(handleResolve, handleReject);
+        return router.handleURL(location.getURL()).then(handleResolve, handleReject);
       }
     });
   }
