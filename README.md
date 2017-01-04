@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This is no longer needed.  Official patch has since been merged into ember.js.
+
 # Ember-fastboot-rooturl-patch
 
 Temporary patch to work around rootURL being broken in FastBoot.
